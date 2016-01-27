@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # install geary mail client
-sudp apt-get install geary
+sudo apt-get install -y geary
 
 # install gradle
-sudo add-apt-repository ppa:cwchien/gradle
+sudo add-apt-repository -y ppa:cwchien/gradle
 sudo apt-get update
-sudo apt-get install gradle-ppa
+sudo apt-get install -y gradle-ppa
