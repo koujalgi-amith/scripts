@@ -9,7 +9,7 @@
 # AWS_USERNAME=<remote username>
 # AWS_IP=<remote host's IP address>
 #
-# Save the above params in /home/<user>/brain-server.cfg and run this script.
+# Save the above params in /home/<user>/server.cfg and run this script.
 
 CFG_FILE=`eval echo ~$USER/server.cfg`
 
