@@ -2,7 +2,7 @@
 
 # Author: Amith Koujalgi
 
-# Ensure you have placed the credentials file (brain-server.cfg) in your home directory with the foloowing structure:
+# Ensure you have placed the credentials file (server.cfg) in your home directory with the foloowing structure:
 #
 # KEYFILE=/path/to/serverkey/file
 # DEST_PATH=/path/to/remote/dir
@@ -11,7 +11,7 @@
 #
 # Save the above params in /home/<user>/brain-server.cfg and run this script.
 
-CFG_FILE=`eval echo ~$USER/brain-server.cfg`
+CFG_FILE=`eval echo ~$USER/server.cfg`
 
 if [ $# -lt 1 ]; then
     echo "No source file specified. Terminating..."
@@ -21,7 +21,7 @@ fi
 
   echo ""
   echo "---------------------------------------------------"
-  echo "*                APP PUSH UTIL                    *"
+  echo "*                FILE PUSH UTIL                    *"
   echo "---------------------------------------------------"
   echo ""
 
@@ -56,7 +56,6 @@ getProperties(){
     DEST_PATH=`grep $CFG_FILE -e "DEST_PATH=" | sed -e "s/DEST_PATH=/$REPLACE/g"`
     AWS_USERNAME=`grep $CFG_FILE -e "AWS_USERNAME=" | sed -e "s/AWS_USERNAME=/$REPLACE/g"`
     echo "---------------------------------------------------"
-    #echo "KEYFILE=$KEYFILE"
     echo "AWS_IP=$AWS_IP"
     echo "AWS_USERNAME=$AWS_USERNAME"
     echo "SRC_FILE=$SRC_FILE"
@@ -67,8 +66,12 @@ getProperties(){
 checkIfSrcFileExists
 checkIfCfgFileExists
 getProperties
+
 ssh -i $KEYFILE $AWS_USERNAME@$AWS_IP "mkdir -p $DEST_PATH"
+
 TARGET_FILE=`basename $1`
 DESTFILE=$DEST_PATH/$TARGET_FILE
+
 echo "Pushing local file '$SRC_FILE' to remote location '$DESTFILE' of server $AWS_IP..." 
+
 scp -i $KEYFILE $SRC_FILE $AWS_USERNAME@$AWS_IP:$DESTFILE
