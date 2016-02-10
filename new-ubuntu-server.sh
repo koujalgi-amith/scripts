@@ -116,7 +116,7 @@ ps axf | grep hadoop | grep -v grep | awk '{print "kill -9 " $1}' | sh
 
 
 cd /ebs/apps/hadoop/bin
-./hdfs namenode -format
+./hdfs namenode -format -force
 
 cd /ebs/apps/hadoop/sbin
 start-dfs.sh &
