@@ -62,7 +62,7 @@ echo 'export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native' >> ~/.bashrc
 echo 'export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"' >> ~/.bashrc
 echo '# -- HADOOP ENVIRONMENT VARIABLES END -- #' >> ~/.bashrc
 
-source ~/.bashrc
+source /home/ubuntu/.bashrc
 
 cd /ebs/apps/
 sudo chmod -R 777 /ebs/apps
