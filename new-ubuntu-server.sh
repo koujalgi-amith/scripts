@@ -120,3 +120,5 @@ cd /ebs/apps/hadoop/bin
 
 cd /ebs/apps/hadoop/sbin
 start-dfs.sh &
+
+# Check if Hadoop namenode is running - http://<host-ip>:50070
