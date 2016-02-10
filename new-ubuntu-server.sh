@@ -105,10 +105,18 @@ cat > /ebs/apps/hdfs-temp.xml << EOF2
 </configuration>
 EOF2
 
+#### edit /ebs/apps/hadoop/etc/hadoop/hadoop-env.sh - set JAVA_HOME as absolute path
 
 cat /ebs/apps/core-temp.xml > /ebs/apps/hadoop/etc/hadoop/core-site.xml
 cat /ebs/apps/hdfs-temp.xml > /ebs/apps/hadoop/etc/hadoop/hdfs-site.xml
 
+# find process ID and force kill
+ps axf | grep start-dfs.sh | grep -v grep | awk '{print "kill -9 " $1}' | sh
+ps axf | grep hadoop | grep -v grep | awk '{print "kill -9 " $1}' | sh
+
+
 cd /ebs/apps/hadoop/bin
-hdfs namenode -format
+./hdfs namenode -format
+
+cd /ebs/apps/hadoop/sbin
 start-dfs.sh &
