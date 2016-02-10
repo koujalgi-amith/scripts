@@ -124,3 +124,5 @@ cd /ebs/apps/hadoop/sbin
 start-dfs.sh &
 
 # Check if Hadoop namenode is running - http://<host-ip>:50070
+PUBLIC_IP=`dig +short myip.opendns.com @resolver1.opendns.com`
+echo "Open this in your browser: http://$PUBLIC_IP:50070"
