@@ -37,7 +37,7 @@ sudo mv spark-1.6.0-bin-hadoop2.6 /ebs/apps/spark
 
 # hadoop..
 cd /ebs/apps/ 
-sudo wget http://www.eu.apache.org/dist/hadoop/common/hadoop-2.7.2/
+sudo wget http://www.eu.apache.org/dist/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz
 sudo tar -xzvf hadoop-2.7.2.tar.gz
 sudo mv hadoop-2.7.2 /ebs/apps/hadoop
 
