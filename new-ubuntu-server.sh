@@ -116,6 +116,10 @@ cat /ebs/apps/hdfs-temp.xml > /ebs/apps/hadoop/etc/hadoop/hdfs-site.xml
 ps axf | grep start-dfs.sh | grep -v grep | awk '{print "kill -9 " $1}' | sh
 ps axf | grep hadoop | grep -v grep | awk '{print "kill -9 " $1}' | sh
 
+# Following steps are required to establish ssh connection by Hadoop internally over ssh:
+# su ubuntu
+# ssh-keygen -t rsa -P ""
+# cat /home/ubuntu/.ssh/id_rsa.pub >> /home/ubuntu/.ssh/authorized_keys
 
 cd /ebs/apps/hadoop/bin
 ./hdfs namenode -format -force
