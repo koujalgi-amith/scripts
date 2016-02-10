@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get autoremove
+sudo apt-get -y autoremove
 # install maven
 sudo apt-get install -y maven
 
@@ -22,7 +22,7 @@ sudo chmod -R 777 /ebs/apps
 
 # scala..
 cd /ebs/apps/
-sudo apt-get remove scala-library scala
+sudo apt-get remove -y scala-library scala
 sudo wget http://www.scala-lang.org/files/archive/scala-2.11.7.deb
 sudo dpkg -i scala-2.11.7.deb
 sudo apt-get update
