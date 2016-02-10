@@ -109,6 +109,6 @@ EOF2
 cat /ebs/apps/core-temp.xml > /ebs/apps/hadoop/etc/hadoop/core-site.xml
 cat /ebs/apps/hdfs-temp.xml > /ebs/apps/hadoop/etc/hadoop/hdfs-site.xml
 
-cat /ebs/apps/hadoop/bin
+cd /ebs/apps/hadoop/bin
 hdfs namenode -format
 start-dfs.sh &
