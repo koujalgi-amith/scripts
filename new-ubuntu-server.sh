@@ -86,11 +86,11 @@ cat > /ebs/apps/hdfs-temp.xml << EOF2
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
 <configuration>
-    <property>
-        <name>dfs.replication</name>
-        <value>1</value>
-    </property>
-<property>
+ <property>
+      <name>dfs.replication</name>
+      <value>1</value>
+ </property>
+ <property>
       <name>dfs.replication</name>
       <value>1</value>
  </property>
