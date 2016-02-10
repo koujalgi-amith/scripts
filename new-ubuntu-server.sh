@@ -125,4 +125,5 @@ start-dfs.sh &
 
 # Check if Hadoop namenode is running - http://<host-ip>:50070
 PUBLIC_IP=`dig +short myip.opendns.com @resolver1.opendns.com`
-echo "Open this in your browser: http://$PUBLIC_IP:50070"
+echo "Open this in your browser to see if Hadoop is running: http://$PUBLIC_IP:50070"
+echo "Open this in your browser to see if Spark is running: http://$PUBLIC_IP:4040"
