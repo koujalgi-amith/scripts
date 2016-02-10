@@ -5,7 +5,7 @@ IP_ADDRESSES=`ip addr | awk '/inet / {sub(/\/.*/, "", $2); print $2}'`
 PRIVATE_IP=`echo $IP_ADDRESSES | cut -d ' ' -f2`
 PRIVATE_IP=`echo $PRIVATE_IP | sed -r 's/\./-/g'`
 IP_ADDRESSES=`echo $IP_ADDRESSES ip-$PRIVATE_IP localhost`
-echo $IP_ADDRESSES
+# echo $IP_ADDRESSES
 
 cat > /etc/hosts << EOF0
 $IP_ADDRESSES
