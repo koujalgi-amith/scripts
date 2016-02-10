@@ -120,6 +120,7 @@ ps axf | grep hadoop | grep -v grep | awk '{print "kill -9 " $1}' | sh
 # su ubuntu
 # ssh-keygen -t rsa -P ""
 # cat /home/ubuntu/.ssh/id_rsa.pub >> /home/ubuntu/.ssh/authorized_keys
+# ssh -oStrictHostKeyChecking=no localhost uptime
 
 cd /ebs/apps/hadoop/bin
 ./hdfs namenode -format -force
