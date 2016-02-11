@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# configure ssh - for hadoop and spark
+# ssh-keygen -t rsa -P ""
+echo -e 'y\n' | ssh-keygen -q -t rsa -P "" -f ~/.ssh/id_rsa
+cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+ssh localhost
+
 # set IP addresses in /etc/hosts file
 IP_ADDRESSES=`ip addr | awk '/inet / {sub(/\/.*/, "", $2); print $2}'`
 PRIVATE_IP=`echo $IP_ADDRESSES | cut -d ' ' -f2`
