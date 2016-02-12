@@ -241,6 +241,8 @@ sudo chmod -R 777 /ebs/apps/
 cd /ebs/apps/hadoop/bin
 ./hdfs namenode -format -force
 
+sudo chmod -R 777 /ebs/apps/
+
 cd /ebs/apps/hadoop/sbin
 start-dfs.sh &
 
