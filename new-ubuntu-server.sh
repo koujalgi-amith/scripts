@@ -237,6 +237,7 @@ ps axf | grep hadoop | grep -v grep | awk '{print "kill -9 " $1}' | sh
 # cat /home/ubuntu/.ssh/id_rsa.pub >> /home/ubuntu/.ssh/authorized_keys
 # ssh -oStrictHostKeyChecking=no localhost uptime
 
+sudo chmod -R 777 /ebs/apps/
 cd /ebs/apps/hadoop/bin
 ./hdfs namenode -format -force
 
