@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # configure ssh - for hadoop and spark
-# ssh-keygen -t rsa -P ""
-echo -e 'y\n' | ssh-keygen -q -t rsa -P "" -f ~/.ssh/id_rsa
+ssh-keygen -t rsa -P ""
+# echo -e 'y\n' | ssh-keygen -q -t rsa -P "" -f ~/.ssh/id_rsa
 cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ssh localhost
 
