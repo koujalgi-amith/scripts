@@ -10,5 +10,4 @@ fkill_func() {
     done
 }
 alias fkill=fkill_func
-#alias fkill='for pid in $(ps -ax | grep -i \!* | awk '{print $1;}'); do kill -9 $pid; done'
 EOF1
