@@ -1,5 +1,5 @@
 # Setup command aliases
-cat > ~/.bash_profile << EOF1
+cat >> ~/.bash_profile << EOF1
 alias l='ls -al'
 
 fkill_func() {
