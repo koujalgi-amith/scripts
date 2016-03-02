@@ -16,4 +16,4 @@ wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/aliases.sh 
 ```
 l - lists all files of a directory
 
-fkill <process-name> - kills all processes by <process-name>
+fkill process-name - kills all processes by process-name
