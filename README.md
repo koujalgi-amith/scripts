@@ -12,5 +12,5 @@ sudo wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/new-ub
 
 Setup aliases:
 ```sh
-sudo wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/aliases.sh -v -O aliases.sh; sudo chmod 777 aliases.sh; ./aliases.sh; rm -rf aliases.sh
+sudo wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/aliases.sh -v -O aliases.sh; sudo chmod 777 aliases.sh; sudo ./aliases.sh; sudo rm -rf aliases.sh
 ```
