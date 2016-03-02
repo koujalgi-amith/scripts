@@ -4,7 +4,7 @@ alias l='ls -al'
 
 fkill_func() {
     PS_NAME=$1
-    for pid in $(ps -ax | grep '$PS_NAME' | awk '{print $1;}');
+    for pid in $(ps -ef | grep '$PS_NAME' | awk '{print $2;}');
     do
         kill -9 $pid;
     done
