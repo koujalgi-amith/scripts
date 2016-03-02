@@ -14,6 +14,13 @@ Setup aliases:
 ```sh
 wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/aliases.sh -v -O aliases.sh; chmod 777 aliases.sh; ./aliases.sh; rm -rf aliases.sh; source ~/.bash_profile;
 ```
-l - lists all files of a directory
 
-fkill process-name - kills all processes by process-name
+list all files of a directory
+```sh
+l
+```
+
+kill all processes by process-name
+```sh
+fkill process-name
+```
