@@ -9,7 +9,7 @@ fkill_func() {
 	    return 0
     fi
     
-    echo "Killing process by name '$1'..."
+    echo "Killing process by name '\$1'..."
     
     PS_NAME=\$1
     for pid in \$(ps -ef | grep \$PS_NAME | awk '{print \$2;}');
