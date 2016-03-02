@@ -9,3 +9,8 @@ Post Ubuntu Server setup
 ```sh
 sudo wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/new-ubuntu-server.sh -v -O new-ubuntu-server.sh; sudo chmod 777 new-ubuntu-server.sh; ./new-ubuntu-server.sh; rm -rf new-ubuntu-server.sh
 ```
+
+Setup aliases:
+```sh
+sudo wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/aliases.sh -v -O aliases.sh; sudo chmod 777 aliases.sh; ./aliases.sh; rm -rf aliases.sh
+```
