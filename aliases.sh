@@ -20,10 +20,13 @@ fkill_func() {
 alias fkill=fkill_func
 
 ips_func(){
+    echo "Your IP addresses:"
+    echo "------------------"
     for ip in \$(ifconfig | grep "inet " | awk '{print \$2;}');
     do
         echo \$ip;
-    done	
+    done
+    echo "------------------"
 }
 alias ip=ips_func
 EOF1
