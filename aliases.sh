@@ -18,4 +18,6 @@ fkill_func() {
     done
 }
 alias fkill=fkill_func
+
+alias ip='ifconfig | grep \"inet \" | awk \'{print \$2;}\''
 EOF1
