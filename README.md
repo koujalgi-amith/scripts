@@ -15,12 +15,17 @@ Setup aliases:
 wget https://raw.githubusercontent.com/koujalgi-amith/scripts/master/aliases.sh -v -O aliases.sh; chmod 777 aliases.sh; ./aliases.sh; rm -rf aliases.sh; source ~/.bash_profile;
 ```
 
-list all files of a directory
+List all files of a directory:
 ```sh
 l
 ```
 
-kill all processes by process-name
+Kill all processes by process-name:
 ```sh
 fkill process-name
+```
+
+List all IP addresses of your computer's network interfaces:
+```sh
+ip
 ```
