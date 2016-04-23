@@ -13,7 +13,8 @@ sudo apt-get install -y ant
 
 sudo apt install -y mysql-server
 
-wget http://mirrors.ibiblio.org/apache/tomcat/tomcat-8/v8.0.9/bin/apache-tomcat-8.0.9.tar.gz
-tar xvzf apache-tomcat-8.0.9.tar.gz
+wget http://mirror.fibergrid.in/apache/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-8.0.33.zip
+sudo mkdir tomcat
+unzip apache-tomcat-8.0.33.zip -d tomcat
 sudo mkdir -p /opt/tomcat
-mv apache-tomcat-8.0.9 /opt/tomcat
+mv tomcat/apache-tomcat-8.0.33/* /opt/tomcat
