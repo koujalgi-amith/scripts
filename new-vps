@@ -12,3 +12,8 @@ sudo apt-get install -y maven
 sudo apt-get install -y ant
 
 sudo apt install -y mysql-server
+
+wget http://mirrors.ibiblio.org/apache/tomcat/tomcat-8/v8.0.9/bin/apache-tomcat-8.0.9.tar.gz
+tar xvzf apache-tomcat-8.0.9.tar.gz
+sudo mkdir -p /opt/tomcat
+mv apache-tomcat-8.0.9 /opt/tomcat
